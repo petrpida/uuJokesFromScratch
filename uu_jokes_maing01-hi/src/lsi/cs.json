@@ -34,10 +34,10 @@
     "about": "O aplikaci"
   },
   "UuJokes.Core.Joke.ListView": {
-    "header": "Jokes",
-    "info": "<uu5string/>The list shows all jokes from the database with possibility of filtering and sorting. All users are able to view and rate jokes (except author) but only users with profile <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> or <UU5.Bricks.Code>Executives</UU5.Bricks.Code> are allowed to create jokes. New jokes are visible only to authors and <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> unless <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> accept them visible for all. If you like particular joke you can easily copy it as component and place everywhere the dynamic content is supported (e.g. uuDockit). For more details visit documentation of the component <UU5.Bricks.Link href='https://uuapp.plus4u.net/uu-bookkit-maing01/71f8d7b5cfdc4336b0abfe47b3cb237b/book/page?code=UuJokesJokeList' target='_blank'>UuJokes.Joke.List</UU5.Bricks.Link>.",
-    "category": "Category",
-    "name": "Name",
-    "rating": "Rating"
+    "header": "Vtipy",
+    "info": "<uu5string/>Tento seznam zobrazuje všechny vtipy z databáze s možností filtrování a řazení. Všichni uživatelé mají možnost vidět a ohodnotit vtip (autor svůj vtip ohodnotit nemůže), ale pouze uživatelé s profilem <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> nebo <UU5.Bricks.Code>Executives</UU5.Bricks.Code> mohou vtipy vytvářet. Nově přidaný vtip je viditelný pouze autorům a <UU5.Bricks.Code>Authorities</UU5.Bricks.Code>, pokud ho ovšem <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> neschválil jako viditelný pro všechny uživatele. Jestli se vám nějaký vtip líbí, můžete ho jednoduše zkopírovat jako komponentu a umístit ho kamkoliv, kde je podporováno dynamické vykreslování (např. uuDockit). Pro více informací navštivte dokumentaci komponenty <UU5.Bricks.Link href='https://uuapp.plus4u.net/uu-bookkit-maing01/71f8d7b5cfdc4336b0abfe47b3cb237b/book/page?code=UuJokesJokeList' target='_blank'>UuJokes.Joke.List</UU5.Bricks.Link>.",
+    "category": "Kategorie",
+    "name": "Název",
+    "rating": "Hodnocení"
   }
 }

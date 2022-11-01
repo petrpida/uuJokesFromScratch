@@ -25,6 +25,11 @@
         "realization": "api/controllers/JokeController.list",
         "httpMethod": "GET",
         "type": "CMD"
+      },
+      "category/list": {
+        "realization": "api/controllers/CategoryController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
       }
     }
   }

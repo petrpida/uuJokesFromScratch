@@ -1,10 +1,10 @@
 "use strict";
 
 const JokesMainUseCaseError = require("./jokes-main-use-case-error");
-const JOKE_ERROR_PREFIX = `${JokesMainUseCaseError.ERROR_PREFIX}joke/`;
+const CATEGORY_ERROR_PREFIX = `${JokesMainUseCaseError.ERROR_PREFIX}category/`;
 
 const List = {
-  UC_CODE: `${JOKE_ERROR_PREFIX}list/`,
+  UC_CODE: `${CATEGORY_ERROR_PREFIX}list/`,
   InvalidDtoIn: class extends JokesMainUseCaseError {
     constructor() {
       super(...arguments);
