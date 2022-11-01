@@ -1,0 +1,36 @@
+{
+  "{asid}": {
+    "profileList": ["AsidAuthorities", "AsidExecutives", "AsidAuditors"],
+    "useCaseMap": {
+    }
+  },
+  "*": {
+    "profileList": ["Authorities", "Executives", "Readers", "AwidLicenseOwner"],
+    "useCaseMap": {
+      "defaultUve": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      },
+      "sys/uuAppWorkspace/initUve": {
+        "sysStateList": ["created"],
+        "profileList": ["Public"]
+      },
+      "sys/uuAppWorkspace/init": {
+        "sysStateList": ["created"],
+        "profileList": ["AwidLicenseOwner"]
+      },
+      "sys/uuAppWorkspace/load": {
+        "sysStateList": ["created", "active", "restricted", "readOnly", "closed", "suspended"],
+        "profileList": ["Authorities", "Executives", "Readers", "AwidLicenseOwner"]
+      },
+      "uu-app-binarystore/getBinaryData": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", "Readers"]
+      },
+      "joke/list": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", "Readers"]
+      }
+    }
+  }
+}
