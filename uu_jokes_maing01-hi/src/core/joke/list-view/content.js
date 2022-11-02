@@ -27,8 +27,10 @@ export const Content = createVisualComponent({
   propTypes: {
     jokeDataList: PropTypes.object.isRequired,
     categoryDataList: PropTypes.object.isRequired,
+    jokePermissions: PropTypes.object,
     onLoadNext: PropTypes.func,
     onDetail: PropTypes.func,
+    onUpdate: PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -62,7 +64,12 @@ export const Content = createVisualComponent({
           verticalGap={ROW_SPACING}
           className={Css.grid()}
         >
-          <Tile {...tileProps} onDetail={props.onDetail} />
+          <Tile
+            {...tileProps}
+            onDetail={props.onDetail}
+            onUpdate={props.onUpdate}
+            jokesPermissions={props.jokesPermissions}
+          />
         </Grid>
         <FilterManagerModal />
         <SorterManagerModal />

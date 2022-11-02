@@ -61,5 +61,16 @@
     "submit": "Vytvořit",
     "cancel": "Zrušit",
     "textOrFile": "Text nebo obrázek musí být vyplněn."
+  },
+  "UuJokes.Core.Joke.ListView.UpdateModal": {
+    "name": "Název",
+    "text": "Text",
+    "image": "Obrázek",
+    "category": "Kategorie",
+    "header": "Upravit vtip",
+    "info": "Můžete upravit vtip...",
+    "submit": "Upravit",
+    "cancel": "Zrušit",
+    "textOrFile": "Text nebo obrázek musí být vyplněn."
   }
 }

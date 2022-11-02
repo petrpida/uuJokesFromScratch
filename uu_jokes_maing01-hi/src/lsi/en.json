@@ -60,6 +60,17 @@
     "info": "You can create the joke...",
     "submit": "Create",
     "cancel": "Cancel",
-    "textOrFile": "Text or image is required."
+    "textOrFile": "Text or image must be provided."
+  },
+  "UuJokes.Core.Joke.ListView.UpdateModal": {
+    "name": "Name",
+    "text": "Text",
+    "image": "Image",
+    "category": "Category",
+    "header": "Update joke",
+    "info": "You can update the joke...",
+    "submit": "Update",
+    "cancel": "Cancel",
+    "textOrFile": "Text or image must be provided."
   }
 }

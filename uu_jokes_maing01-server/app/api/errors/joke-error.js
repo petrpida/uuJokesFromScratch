@@ -113,8 +113,97 @@ const Create = {
   },
 };
 
+const Update = {
+  UC_CODE: `${JOKE_ERROR_PREFIX}update/`,
+  InvalidDtoIn: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+  JokesDoesNotExist: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}jokesDoesNotExist`;
+      this.message = "UuObject jokes does not exist.";
+    }
+  },
+  JokesNotInCorrectState: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}jokesNotInCorrectState`;
+      this.message = "UuObject jokes is not in correct state.";
+    }
+  },
+  InvalidInputCombination: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}invalidInputCombination`;
+      this.message = "Invalid input combination - it is not possible to update and delete image at the same time.";
+    }
+  },
+  TextCannotBeRemoved: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}textCannotBeRemoved`;
+      this.message = "Text cannot be removed if joke would end up without both text and image.";
+    }
+  },
+  ImageCannotBeDeleted: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}imageCannotBeDeleted`;
+      this.message = "Image cannot be deleted if joke would end up without both text and image.";
+    }
+  },
+  UserNotAuthorized: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}userNotAuthorized`;
+      this.message = "User not authorized.";
+    }
+  },
+  JokeDoesNotExist: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}jokeDoesNotExist`;
+      this.message = "Joke does not exist.";
+    }
+  },
+  UuBinaryCreateFailed: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}uuBinaryCreateFailed`;
+      this.message = "Creating uuBinary failed.";
+    }
+  },
+  UuBinaryUpdateBinaryDataFailed: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}uuBinaryUpdateBinaryDataFailed`;
+      this.message = "Updating uuBinary data failed.";
+    }
+  },
+  InvalidImage: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}invalidImage`;
+      this.message = "Image is invalid or it is not an image.";
+    }
+  },
+  JokeDaoUpdateFailed: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}jokeDaoUpdateFailed`;
+      this.message = "Update joke by joke Dao update failed.";
+    }
+  },
+};
+
 module.exports = {
   List,
   Get,
   Create,
+  Update,
 };

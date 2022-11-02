@@ -43,6 +43,14 @@
         "realization": "api/controllers/JokeController.create",
         "httpMethod": "POST",
         "type": "CMD"
+      },
+      "joke/update": {
+        "realization": "api/controllers/JokeController.update",
+        "httpMethod": "POST",
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       }
     }
   }

@@ -2,6 +2,7 @@
 const ListAbl = require("../../abl/joke/list-abl");
 const GetAbl = require("../../abl/joke/get-abl");
 const CreateAbl = require("../../abl/joke/create-abl");
+const UpdateAbl = require("../../abl/joke/update-abl");
 
 class JokeController {
 
@@ -17,7 +18,9 @@ class JokeController {
     return CreateAbl.create(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
   }
 
-  // update
+  static update(ucEnv) {
+    return UpdateAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
+  }
 
   // delete
 

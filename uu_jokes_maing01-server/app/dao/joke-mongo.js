@@ -30,6 +30,13 @@ class JokeMongo extends UuObjectDao {
   // getByName DAO method
 
   // update DAO method
+  async update(uuObject) {
+    if (uuObject.categoryIdList) {
+      uuObject.categoryIdList = uuObject.categoryIdList.map((categoryId) => new ObjectId(categoryId));
+    }
+    let filter = { id: uuObject.id, awid: uuObject.awid };
+    return await super.findOneAndUpdate(filter, uuObject, "NONE");
+  }
 
   // delete DAO method
 

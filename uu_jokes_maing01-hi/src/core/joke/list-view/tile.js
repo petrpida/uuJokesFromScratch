@@ -37,6 +37,8 @@ export const Tile = createVisualComponent({
   //@@viewOn:propTypes
   propTypes: {
     onDetail: PropTypes.func,
+    onUpdate: PropTypes.func,
+    jokesPermissions: PropTypes.object,
   },
   //@@viewOff:propTypes
 
@@ -47,6 +49,7 @@ export const Tile = createVisualComponent({
   render(props) {
     //@@viewOn:private
     const { data: jokeDataObject } = props;
+    const actionsDisabled = jokeDataObject.state === "pending";
 
     useEffect(() => {
       if (
@@ -64,6 +67,25 @@ export const Tile = createVisualComponent({
     const handleDetail = () => {
       props.onDetail(jokeDataObject.data);
     };
+
+    function handleUpdate(event) {
+      event.stopPropagation();
+      props.onUpdate(jokeDataObject);
+    }
+
+    function getItemActions() {
+      const actionList = [];
+
+      if (props.jokesPermissions.joke.canManage) {
+        actionList.push({
+          icon: "mdi-pencil",
+          onClick: handleUpdate,
+          disabled: actionsDisabled,
+        });
+      }
+
+      return actionList;
+    }
     //@@viewOff:private
 
     //@@viewOn:render
@@ -79,6 +101,7 @@ export const Tile = createVisualComponent({
         onClick={handleDetail}
         significance="subdued"
         borderRadius="elementary"
+        actionList={getItemActions()}
       >
         {(tile) => (
           <div className={Css.content()}>

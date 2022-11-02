@@ -32,7 +32,11 @@ const Calls = {
     create(dtoIn) {
       const commandUri = Calls.getCommandUri("joke/create");
       return Calls.call("post", commandUri, dtoIn);
-    }
+    },
+    update(dtoIn) {
+      const commandUri = Calls.getCommandUri("joke/update");
+      return Calls.call("post", commandUri, dtoIn);
+    },
   },
 
   Category: {

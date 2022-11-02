@@ -27,6 +27,7 @@ export const ListProvider = createComponent({
         create: handleCreate,
       },
       itemHandlerMap: {
+        update: handleUpdate,
         getImage: handleGetImage,
       },
     });
@@ -78,6 +79,12 @@ export const ListProvider = createComponent({
 
     function handleCreate(values) {
       return Calls.Joke.create(values);
+    }
+
+    async function handleUpdate(values) {
+      const joke = await Calls.Joke.update(values);
+      const imageUrl = values.image && generateAndRegisterImageUrl(values.image);
+      return { ...joke, imageFile: values.image, imageUrl };
     }
 
     useEffect(() => {

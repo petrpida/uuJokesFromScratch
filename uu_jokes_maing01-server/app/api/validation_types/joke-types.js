@@ -18,3 +18,12 @@ const jokeCreateDtoInType = shape({
   categoryIdList: array(id(), 1, 10),
   image: binary().isRequired("text"),
 });
+
+const jokeUpdateDtoInType = shape({
+  id: id().isRequired(),
+  name: uu5String(255),
+  text: uu5String(4000),
+  categoryIdList: array(id(), 10),
+  image: binary(),
+  deleteImage: boolean(),
+});

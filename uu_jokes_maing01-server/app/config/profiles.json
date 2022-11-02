@@ -42,6 +42,10 @@
       "joke/create": {
         "sysStateList": ["active"],
         "profileList": ["Authorities", "Executives"]
+      },
+      "joke/update": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
       }
     }
   }

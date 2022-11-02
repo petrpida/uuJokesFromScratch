@@ -20,6 +20,15 @@ const Warnings = {
       message: "One or more categories with given id do not exist.",
     },
   },
+  Update: {
+    UnsupportedKeys: {
+      code: `${Errors.Update.UC_CODE}unsupportedKeys`,
+    },
+    CategoryDoesNotExist: {
+      code: `${Errors.Update.UC_CODE}categoryDoesNotExist`,
+      message: "One or more categories with given id do not exist.",
+    },
+  },
 };
 
 module.exports = Warnings;
