@@ -39,5 +39,13 @@
     "category": "Kategorie",
     "name": "Název",
     "rating": "Hodnocení"
+  },
+  "UuJokes.Core.Joke.DetailView": {
+    "info": "<uu5string/> Tato komponenta zobrazuje konkrétní vtip z databáze. Pro více informací navštivte dokumentaci komponenty <UU5.Bricks.Link href='https://uuapp.plus4u.net/uu-bookkit-maing01/71f8d7b5cfdc4336b0abfe47b3cb237b/book/page?code=UuJokesJokeDetail' target='_blank'>UuJokes.Joke.Detail</UU5.Bricks.Link>."
+  },
+  "UuJokes.Core.Joke.DetailView.Content": {
+    "oneVotes": "%d hlas",
+    "fewVotes": "%d hlasy",
+    "otherVotes": "%d hlasů"
   }
 }

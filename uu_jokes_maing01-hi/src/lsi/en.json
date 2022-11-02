@@ -39,5 +39,13 @@
     "category": "Category",
     "name": "Name",
     "rating": "Rating"
+  },
+  "UuJokes.Core.Joke.DetailView": {
+    "info": "<uu5string/>The component shows particular joke from database. For more details visit documentation of the component <UU5.Bricks.Link href='https://uuapp.plus4u.net/uu-bookkit-maing01/71f8d7b5cfdc4336b0abfe47b3cb237b/book/page?code=UuJokesJokeDetail' target='_blank'>UuJokes.Joke.Detail</UU5.Bricks.Link>."
+  },
+  "UuJokes.Core.Joke.DetailView.Content": {
+    "oneVotes": "%d vote",
+    "fewVotes": "%d votes",
+    "otherVotes": "%d votes"
   }
 }

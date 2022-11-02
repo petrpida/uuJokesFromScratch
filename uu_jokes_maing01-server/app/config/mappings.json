@@ -30,6 +30,14 @@
         "realization": "api/controllers/CategoryController.list",
         "httpMethod": "GET",
         "type": "CMD"
+      },
+      "joke/get": {
+        "realization": "api/controllers/JokeController.get",
+        "httpMethod": "GET",
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       }
     }
   }

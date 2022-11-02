@@ -1,7 +1,7 @@
 //@@viewOn:imports
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import { createVisualComponent, Utils, useEffect } from "uu5g05";
+import { createVisualComponent, Utils, useEffect, PropTypes } from "uu5g05";
 import Uu5Elements, { Pending, Text } from "uu5g05-elements";
 import Config from "./config/config";
 //@@viewOff:imports
@@ -35,7 +35,9 @@ export const Tile = createVisualComponent({
   //@@viewOff:statics
 
   //@@viewOn:propTypes
-  propTypes: {},
+  propTypes: {
+    onDetail: PropTypes.func,
+  },
   //@@viewOff:propTypes
 
   //@@viewOn:defaultProps
@@ -58,6 +60,10 @@ export const Tile = createVisualComponent({
           .catch((error) => Tile.logger.error("Error loading image", error));
       }
     }, [jokeDataObject]);
+
+    const handleDetail = () => {
+      props.onDetail(jokeDataObject.data);
+    };
     //@@viewOff:private
 
     //@@viewOn:render
@@ -70,6 +76,7 @@ export const Tile = createVisualComponent({
         header={<Header joke={joke} />}
         footer={<Footer joke={joke} />}
         footerSignificance="distinct"
+        onClick={handleDetail}
         significance="subdued"
         borderRadius="elementary"
       >

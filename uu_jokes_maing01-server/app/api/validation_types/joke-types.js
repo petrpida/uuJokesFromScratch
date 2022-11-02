@@ -7,3 +7,7 @@ const jokeListDtoInType = shape({
     pageSize: integer(),
   }),
 });
+
+const jokeGetDtoInType = shape({
+  id: id().isRequired(),
+});

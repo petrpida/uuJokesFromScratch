@@ -13,10 +13,12 @@ const About = Utils.Component.lazy(() => import("../routes/about.js"));
 const InitAppWorkspace = Utils.Component.lazy(() => import("../routes/init-app-workspace.js"));
 const ControlPanel = Utils.Component.lazy(() => import("../routes/control-panel.js"));
 const Jokes = Utils.Component.lazy(() => import("../routes/jokes.js"));
+const Joke = Utils.Component.lazy(() => import("../routes/joke.js"));
 
 const ROUTE_MAP = {
   "": { redirect: "jokes" },
   jokes: (props) => <Jokes {...props} />,
+  jokeDetail: (props) => <Joke {...props} />,
   about: (props) => <About {...props} />,
   "sys/uuAppWorkspace/initUve": (props) => <InitAppWorkspace {...props} />,
   controlPanel: (props) => <ControlPanel {...props} />,

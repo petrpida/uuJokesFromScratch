@@ -34,6 +34,10 @@
       "category/list": {
         "sysStateList": ["active"],
         "profileList": ["Authorities", "Executives", "Readers"]
+      },
+      "joke/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives", "Readers"]
       }
     }
   }

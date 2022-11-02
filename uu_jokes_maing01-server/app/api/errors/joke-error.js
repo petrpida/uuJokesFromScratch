@@ -28,6 +28,39 @@ const List = {
   },
 };
 
+const Get = {
+  UC_CODE: `${JOKE_ERROR_PREFIX}get/`,
+  InvalidDtoIn: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Get.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+  JokesDoesNotExist: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Get.UC_CODE}jokesDoesNotExist`;
+      this.message = "UuObject jokes does not exist.";
+    }
+  },
+  JokesNotInCorrectState: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Get.UC_CODE}jokesNotInCorrectState`;
+      this.message = "UuObject jokes is not in correct state.";
+    }
+  },
+  JokeDoesNotExist: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Get.UC_CODE}jokeDoesNotExist`;
+      this.message = "Joke does not exist.";
+    }
+  },
+};
+
 module.exports = {
   List,
+  Get,
 };

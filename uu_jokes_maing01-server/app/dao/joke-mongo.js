@@ -17,6 +17,9 @@ class JokeMongo extends UuObjectDao {
   // create DAO method
 
   // get DAO method
+  async get(awid, id) {
+    return await super.findOne({ id, awid });
+  }
 
   // getByName DAO method
 
@@ -25,7 +28,6 @@ class JokeMongo extends UuObjectDao {
   // delete DAO method
 
   // list DAO method
-
   async list(awid, sortBy, order, pageInfo) {
     const filter = { awid };
 
