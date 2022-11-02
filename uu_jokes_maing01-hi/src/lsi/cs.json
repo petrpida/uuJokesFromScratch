@@ -36,6 +36,9 @@
   "UuJokes.Core.Joke.ListView": {
     "header": "Vtipy",
     "info": "<uu5string/>Tento seznam zobrazuje všechny vtipy z databáze s možností filtrování a řazení. Všichni uživatelé mají možnost vidět a ohodnotit vtip (autor svůj vtip ohodnotit nemůže), ale pouze uživatelé s profilem <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> nebo <UU5.Bricks.Code>Executives</UU5.Bricks.Code> mohou vtipy vytvářet. Nově přidaný vtip je viditelný pouze autorům a <UU5.Bricks.Code>Authorities</UU5.Bricks.Code>, pokud ho ovšem <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> neschválil jako viditelný pro všechny uživatele. Jestli se vám nějaký vtip líbí, můžete ho jednoduše zkopírovat jako komponentu a umístit ho kamkoliv, kde je podporováno dynamické vykreslování (např. uuDockit). Pro více informací navštivte dokumentaci komponenty <UU5.Bricks.Link href='https://uuapp.plus4u.net/uu-bookkit-maing01/71f8d7b5cfdc4336b0abfe47b3cb237b/book/page?code=UuJokesJokeList' target='_blank'>UuJokes.Joke.List</UU5.Bricks.Link>.",
+    "createSuccessPrefix": "Vtip ",
+    "createSuccessSuffix": " byl vytvořen",
+    "createJoke": "Vytvořit vtip",
     "category": "Kategorie",
     "name": "Název",
     "rating": "Hodnocení"
@@ -47,5 +50,16 @@
     "oneVotes": "%d hlas",
     "fewVotes": "%d hlasy",
     "otherVotes": "%d hlasů"
+  },
+  "UuJokes.Core.Joke.ListView.CreateModal": {
+    "name": "Název",
+    "text": "Text",
+    "image": "Obrázek",
+    "category": "Kategorie",
+    "header": "Vytvořit vtip",
+    "info": "Můžete vytvořit vtip...",
+    "submit": "Vytvořit",
+    "cancel": "Zrušit",
+    "textOrFile": "Text nebo obrázek musí být vyplněn."
   }
 }

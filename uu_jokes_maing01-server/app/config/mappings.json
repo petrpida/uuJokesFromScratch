@@ -38,6 +38,11 @@
         "dtoInAuditMap": {
           "id": "$.id"
         }
+      },
+      "joke/create": {
+        "realization": "api/controllers/JokeController.create",
+        "httpMethod": "POST",
+        "type": "CMD"
       }
     }
   }

@@ -28,6 +28,17 @@ class CategoryMongo extends UuObjectDao {
 
     return await super.find(filter, pageInfo, sort);
   }
+
+  async listByIdList(awid, categoryIdList) {
+    const filter = {
+      awid,
+      _id: {
+        $in: categoryIdList.map((id) => new ObjectId(id)),
+      },
+    };
+
+    return await super.find(filter);
+  }
 }
 
 module.exports = CategoryMongo;

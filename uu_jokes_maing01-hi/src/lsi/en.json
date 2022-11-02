@@ -36,6 +36,9 @@
   "UuJokes.Core.Joke.ListView": {
     "header": "Jokes",
     "info": "<uu5string/>The list shows all jokes from the database with possibility of filtering and sorting. All users are able to view and rate jokes (except author) but only users with profile <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> or <UU5.Bricks.Code>Executives</UU5.Bricks.Code> are allowed to create jokes. New jokes are visible only to authors and <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> unless <UU5.Bricks.Code>Authorities</UU5.Bricks.Code> accept them visible for all. If you like particular joke you can easily copy it as component and place everywhere the dynamic content is supported (e.g. uuDockit). For more details visit documentation of the component <UU5.Bricks.Link href='https://uuapp.plus4u.net/uu-bookkit-maing01/71f8d7b5cfdc4336b0abfe47b3cb237b/book/page?code=UuJokesJokeList' target='_blank'>UuJokes.Joke.List</UU5.Bricks.Link>.",
+    "createSuccessPrefix": "Joke ",
+    "createSuccessSuffix": " was created",
+    "createJoke": "Create joke",
     "category": "Category",
     "name": "Name",
     "rating": "Rating"
@@ -47,5 +50,16 @@
     "oneVotes": "%d vote",
     "fewVotes": "%d votes",
     "otherVotes": "%d votes"
+  },
+  "UuJokes.Core.Joke.ListView.CreateModal": {
+    "name": "Name",
+    "text": "Text",
+    "image": "Image",
+    "category": "Category",
+    "header": "Create joke",
+    "info": "You can create the joke...",
+    "submit": "Create",
+    "cancel": "Cancel",
+    "textOrFile": "Text or image is required."
   }
 }

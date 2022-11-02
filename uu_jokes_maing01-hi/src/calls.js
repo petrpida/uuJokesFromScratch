@@ -28,6 +28,10 @@ const Calls = {
     get(dtoIn) {
       const commandUri = Calls.getCommandUri("joke/get");
       return Calls.call("get", commandUri, dtoIn);
+    },
+    create(dtoIn) {
+      const commandUri = Calls.getCommandUri("joke/create");
+      return Calls.call("post", commandUri, dtoIn);
     }
   },
 

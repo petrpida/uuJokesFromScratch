@@ -21,7 +21,7 @@
       },
       "sys/uuAppWorkspace/load": {
         "sysStateList": ["created", "active", "restricted", "readOnly", "closed", "suspended"],
-        "profileList": ["Authorities", "Executives", "Readers", "AwidLicenseOwner"]
+        "profileList": ["Authorities", "Executives", "AwidLicenseOwner", "Public", "AwidInitiator"]
       },
       "uu-app-binarystore/getBinaryData": {
         "sysStateList": ["active"],
@@ -38,6 +38,10 @@
       "joke/get": {
         "sysStateList": ["active"],
         "profileList": ["Authorities", "Executives", "Readers"]
+      },
+      "joke/create": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
       }
     }
   }

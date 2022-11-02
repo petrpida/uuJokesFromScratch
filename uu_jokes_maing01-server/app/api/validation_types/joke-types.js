@@ -11,3 +11,10 @@ const jokeListDtoInType = shape({
 const jokeGetDtoInType = shape({
   id: id().isRequired(),
 });
+
+const jokeCreateDtoInType = shape({
+  name: uu5String(255).isRequired(),
+  text: uu5String(4000).isRequired("image"),
+  categoryIdList: array(id(), 1, 10),
+  image: binary().isRequired("text"),
+});

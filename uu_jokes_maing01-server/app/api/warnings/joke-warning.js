@@ -11,6 +11,15 @@ const Warnings = {
       code: `${Errors.Get.UC_CODE}unsupportedKeys`,
     },
   },
+  Create: {
+    UnsupportedKeys: {
+      code: `${Errors.Create.UC_CODE}unsupportedKeys`,
+    },
+    CategoryDoesNotExist: {
+      code: `${Errors.Create.UC_CODE}categoryDoesNotExist`,
+      message: "One or more categories with given id do not exist.",
+    },
+  },
 };
 
 module.exports = Warnings;
