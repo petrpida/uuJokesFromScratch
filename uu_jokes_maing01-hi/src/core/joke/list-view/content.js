@@ -31,6 +31,7 @@ export const Content = createVisualComponent({
     onLoadNext: PropTypes.func,
     onDetail: PropTypes.func,
     onUpdate: PropTypes.func,
+    onDelete: PropTypes.func,
   },
   //@@viewOff:propTypes
 
@@ -68,6 +69,7 @@ export const Content = createVisualComponent({
             {...tileProps}
             onDetail={props.onDetail}
             onUpdate={props.onUpdate}
+            onDelete={props.onDelete}
             jokesPermissions={props.jokesPermissions}
           />
         </Grid>

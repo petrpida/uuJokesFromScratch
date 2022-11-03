@@ -72,5 +72,11 @@
     "submit": "Upravit",
     "cancel": "Zrušit",
     "textOrFile": "Text nebo obrázek musí být vyplněn."
+  },
+  "UuJokes.Core.Joke.ListView.DeleteModal": {
+    "header": "Vymazat vtip",
+    "question": "Opravdu chcete vymazat vtip '{0}' ?",
+    "cancel": "Zrušit",
+    "delete": "Vymazat"
   }
 }

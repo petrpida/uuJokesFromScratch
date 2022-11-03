@@ -39,6 +39,9 @@ class JokeMongo extends UuObjectDao {
   }
 
   // delete DAO method
+  async delete(awid, id) {
+    await super.deleteOne({ awid, id });
+  }
 
   // list DAO method
   async list(awid, sortBy, order, pageInfo) {

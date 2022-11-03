@@ -16,6 +16,10 @@
         "joke": {
           "realization": "dao/JokeMongo",
           "maxNoi": 1000
+        },
+        "jokeRating": {
+          "realization": "dao/JokeRatingMongo",
+          "maxNoi": 10000
         }
       }
     },

@@ -27,3 +27,7 @@ const jokeUpdateDtoInType = shape({
   image: binary(),
   deleteImage: boolean(),
 });
+
+const jokeDeleteDtoInType = shape({
+  id: id().isRequired()
+});

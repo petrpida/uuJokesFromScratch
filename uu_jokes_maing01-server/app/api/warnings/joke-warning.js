@@ -29,6 +29,11 @@ const Warnings = {
       message: "One or more categories with given id do not exist.",
     },
   },
+  Delete: {
+    UnsupportedKeys: {
+      code: `${Errors.Delete.UC_CODE}unsupportedKeys`,
+    },
+  },
 };
 
 module.exports = Warnings;

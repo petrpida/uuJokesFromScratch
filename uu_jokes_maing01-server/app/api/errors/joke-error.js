@@ -201,9 +201,56 @@ const Update = {
   },
 };
 
+const Delete = {
+  UC_CODE: `${JOKE_ERROR_PREFIX}delete/`,
+  InvalidDtoIn: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+  JokesDoesNotExist: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}jokesDoesNotExist`;
+      this.message = "UuObject jokes does not exist.";
+    }
+  },
+  JokesNotInCorrectState: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}jokesNotInCorrectState`;
+      this.message = "UuObject jokes is not in correct state.";
+    }
+  },
+  JokeDoesNotExist: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}jokeDoesNotExist`;
+      this.message = "Joke does not exist.";
+    }
+  },
+  UserNotAuthorized: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}userNotAuthorized`;
+      this.message = "User not authorized.";
+    }
+  },
+  UuBinaryDeleteFailed: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Delete.UC_CODE}uuBinaryDeleteFailed`;
+      this.message = "Deleting uuBinary failed.";
+    }
+  },
+};
+
 module.exports = {
   List,
   Get,
   Create,
   Update,
+  Delete,
 };

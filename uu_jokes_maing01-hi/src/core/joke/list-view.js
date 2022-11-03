@@ -18,6 +18,7 @@ import Content from "./list-view/content";
 import DataListStateResolver from "../data-list-state-resolver";
 import CreateModal from "./list-view/create-modal";
 import UpdateModal from "./list-view/update-modal";
+import DeleteModal from "./list-view/delete-modal";
 import Config from "./config/config";
 import importLsi from "../../lsi/import-lsi";
 //@@viewOff:imports
@@ -52,9 +53,10 @@ const ListView = createVisualComponent({
     const { addAlert } = useAlertBus();
     const [createData, setCreateData] = useState({ shown: false });
     const [updateData, setUpdateData] = useState({ shown: false, id: undefined });
+    const [deleteData, setDeleteData] = useState({ shown: false, id: undefined });
     const [, setRoute] = useRoute();
 
-    const activeDataObjectId = updateData.id;
+    const activeDataObjectId = updateData.id || deleteData.id;
     let activeDataObject;
 
     if (activeDataObjectId) {
@@ -151,6 +153,17 @@ const ListView = createVisualComponent({
       setUpdateData({ shown: false });
     };
 
+    const handleDelete = useCallback(
+      (jokeDataObject) => setDeleteData({ shown: true, id: jokeDataObject.data.id }),
+      [setDeleteData]
+    );
+
+    const handleDeleteDone = () => {
+      setDeleteData({ shown: false });
+    };
+
+    const handleDeleteCancel = () => setDeleteData({ shown: false });
+
     // Defining permissions
     const profileList = systemData.profileData.uuIdentityProfileList;
     const isAuthority = profileList.includes("Authorities");
@@ -170,7 +183,6 @@ const ListView = createVisualComponent({
     //@@viewOn:render
     const attrs = Utils.VisualComponent.getAttrs(props);
     const actionList = getActions(props, jokesPermissions, { handleCreate });
-
     return (
       <>
         {createData.shown && (
@@ -188,6 +200,16 @@ const ListView = createVisualComponent({
             categoryDataList={props.categoryDataList}
             onSaveDone={handleUpdateDone}
             onCancel={handleUpdateCancel}
+            shown
+          />
+        )}
+        {/* HINT: We need to check activeDataObject only for DeleteModal because deleteData.shown is true
+            for brief moment after dataObject removal from dataList (2 separated state values) */}
+        {deleteData.shown && activeDataObject && (
+          <DeleteModal
+            jokeDataObject={activeDataObject}
+            onDeleteDone={handleDeleteDone}
+            onCancel={handleDeleteCancel}
             shown
           />
         )}
@@ -217,6 +239,7 @@ const ListView = createVisualComponent({
                   onLoadNext={handleLoadNext}
                   onDetail={handleDetail}
                   onUpdate={handleUpdate}
+                  onDelete={handleDelete}
                 />
               </DataListStateResolver>
             </DataListStateResolver>

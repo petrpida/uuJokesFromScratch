@@ -51,6 +51,14 @@
         "dtoInAuditMap": {
           "id": "$.id"
         }
+      },
+      "joke/delete": {
+        "realization": "api/controllers/JokeController.delete",
+        "httpMethod": "POST",
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       }
     }
   }

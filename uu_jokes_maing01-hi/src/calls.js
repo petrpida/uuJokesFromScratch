@@ -37,6 +37,10 @@ const Calls = {
       const commandUri = Calls.getCommandUri("joke/update");
       return Calls.call("post", commandUri, dtoIn);
     },
+    delete(dtoIn) {
+      const commandUri = Calls.getCommandUri("joke/delete");
+      return Calls.call("post", commandUri, dtoIn);
+    },
   },
 
   Category: {

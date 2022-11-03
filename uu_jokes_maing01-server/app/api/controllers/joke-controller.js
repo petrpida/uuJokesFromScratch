@@ -3,6 +3,7 @@ const ListAbl = require("../../abl/joke/list-abl");
 const GetAbl = require("../../abl/joke/get-abl");
 const CreateAbl = require("../../abl/joke/create-abl");
 const UpdateAbl = require("../../abl/joke/update-abl");
+const DeleteAbl = require("../../abl/joke/delete-abl");
 
 class JokeController {
 
@@ -22,7 +23,9 @@ class JokeController {
     return UpdateAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
   }
 
-  // delete
+  static delete(ucEnv) {
+    return DeleteAbl.delete(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
+  }
 
 }
 

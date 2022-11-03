@@ -72,5 +72,11 @@
     "submit": "Update",
     "cancel": "Cancel",
     "textOrFile": "Text or image must be provided."
+  },
+  "UuJokes.Core.Joke.ListView.DeleteModal": {
+    "header": "Delete joke",
+    "question": "Do you really want to delete joke '{0}' ?",
+    "cancel": "Cancel",
+    "delete": "Delete"
   }
 }

@@ -4,6 +4,7 @@ const Constants = {
     JOKES_MAIN: "jokesMain",
     CATEGORY: "category",
     JOKE: "joke",
+    JOKE_RATING: "jokeRating",
   },
 
   Jokes: {

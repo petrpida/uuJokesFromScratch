@@ -38,6 +38,7 @@ export const Tile = createVisualComponent({
   propTypes: {
     onDetail: PropTypes.func,
     onUpdate: PropTypes.func,
+    onDelete: PropTypes.func,
     jokesPermissions: PropTypes.object,
   },
   //@@viewOff:propTypes
@@ -73,6 +74,11 @@ export const Tile = createVisualComponent({
       props.onUpdate(jokeDataObject);
     }
 
+    function handleDelete(event) {
+      event.stopPropagation();
+      props.onDelete(jokeDataObject);
+    }
+
     function getItemActions() {
       const actionList = [];
 
@@ -80,6 +86,12 @@ export const Tile = createVisualComponent({
         actionList.push({
           icon: "mdi-pencil",
           onClick: handleUpdate,
+          disabled: actionsDisabled,
+        });
+
+        actionList.push({
+          icon: "mdi-delete",
+          onClick: handleDelete,
           disabled: actionsDisabled,
         });
       }

@@ -28,6 +28,7 @@ export const ListProvider = createComponent({
       },
       itemHandlerMap: {
         update: handleUpdate,
+        delete: handleDelete,
         getImage: handleGetImage,
       },
     });
@@ -85,6 +86,11 @@ export const ListProvider = createComponent({
       const joke = await Calls.Joke.update(values);
       const imageUrl = values.image && generateAndRegisterImageUrl(values.image);
       return { ...joke, imageFile: values.image, imageUrl };
+    }
+
+    function handleDelete(joke) {
+      const dtoIn = { id: joke.id };
+      return Calls.Joke.delete(dtoIn);
     }
 
     useEffect(() => {
